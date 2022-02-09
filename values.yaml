@@ -1,0 +1,33 @@
+adminPassword: "admin!*"
+virtualHost: pihole.enclave.land
+DNS1: "1.1.1.1"
+DNS2: "8.8.8.8"
+dnsmasq:
+  customDnsEntries:
+    - address=/rancher.enclave.land/10.123.241.47
+    - address=/pihole.enclave.land/10.123.240.124
+    - address=/nodered.enclave.land/10.123.240.124
+    - address=/mom-unifi.enclave.land/10.123.240.124
+    - address=/nodered.enclave.land/10.123.240.124
+    - address=/jump-gcp.enclave.land/10.123.240.124
+    - address=/budibase.enclave.land/10.123.240.124
+    - address=/ctf.enclave.land/10.123.240.124
+    - address=/huron.enclave.land/192.168.100.4
+    - address=/oak.enclave.land/192.168.100.3
+    - address=/unifi.enclave.land/192.168.100.1
+    - address=/jump-edge.enclave.land/100.110.70.92
+    - address=/edge-router.enclave.land/192.168.10.1
+    - address=/edge-dsl-a.enclave.land/192.168.3.1
+    - address=/edge-dsl-b.land/192.168.5.1
+    - address=/edge-dsl-c.enclave.land/192.168.7.1
+persistentVolumeClaim:
+  enabled: true
+
+serviceWeb:
+  type: ClusterIP
+
+serviceDns:
+  type: ClusterIP
+
+serviceDhcp:
+  enabled: false
